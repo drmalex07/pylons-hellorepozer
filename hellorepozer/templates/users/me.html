@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/" py:strip="">
+
+<head>
+  <title>Me</title>
+  <style>
+    body { font-size: 12px; }
+    h2 { font-size: 18px; }
+    h2 span.small { font-size: 12px; }
+    dt { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h2>Hello authenticated user! <span class='small'><a href="${c.logout_url}">Logout</a></span></h2>  
+  <p>
+    Your repoze.who.identity is 
+    <py:for each="k,v in c.who_identity.items()">
+    <dt><code>${k}</code></dt>
+    <dd><code>${repr(v)}</code></dd>
+    </py:for>
+    
+  </p>
+  <p>
+    Visited <code>${c.count_visits}</code> times
+  </p>
+</body>
+</html>
