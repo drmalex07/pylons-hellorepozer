@@ -17,6 +17,7 @@ setup(
         "SQLAlchemy>=0.5",
         "Genshi>=0.4",
         "repoze.who<=1.9",
+        "python-ldap",
         "repoze.what",
         "repoze.who.plugins.ldap",
         "repoze.who.plugins.openid",
